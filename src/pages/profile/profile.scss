@@ -1,0 +1,30 @@
+page-profile {
+    .button {
+        background: white;
+        color: #627B95;
+        font-size: 20px;
+        height:40px;
+        width:150px;
+        cursor:pointer;
+        border: 2px solid #627B95;
+        border-radius: 5px;
+
+    }
+    
+
+
+    .button:hover{
+        background-color: #627B95;
+        color: white;
+    }
+
+    .textformat{
+        font-size: 20px;
+        color: #53565A;
+        
+    }
+
+
+
+
+}
