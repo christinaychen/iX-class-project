@@ -35,7 +35,7 @@ export class ProvidersPage {
   itemSelected(provider) {
     if (provider=="Shelter 1")
       this.navCtrl.push(Shelter1Page);
-    if (provider=="Shelter 2")
+    else if (provider=="Shelter 2")
       this.navCtrl.push(Shelter2Page);
     if (provider=="Shelter 3")
       this.navCtrl.push(Shelter3Page);
