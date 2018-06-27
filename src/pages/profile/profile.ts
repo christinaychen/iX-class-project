@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { RegistrationPage } from '../register/register';
+import { ProvidersPage } from '../providers/providers';
 
 @Component({
   selector: 'page-profile',
@@ -16,6 +17,10 @@ export class ProfilePage {
     console.log("Logging out...");
     this.navCtrl.popTo(HomePage);
     this.navCtrl.popTo(HomePage);
+  }
+
+  navigateToProviders() {
+    this.navCtrl.push(ProvidersPage);
   }
 
 }

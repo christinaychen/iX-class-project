@@ -4,11 +4,15 @@ page-profile {
         color: #627B95;
         font-size: 20px;
         height:40px;
-        width:150px;
+        width:100px;
         cursor:pointer;
         border: 2px solid #627B95;
         border-radius: 5px;
 
+    }
+
+    .providerbutton {
+        width:200px;
     }
     
 
@@ -23,6 +27,12 @@ page-profile {
         color: #53565A;
         
     }
+
+    p.one {
+        border-style: solid;
+        border-width: 5px;
+    }
+    
 
 
 

@@ -6,7 +6,10 @@ import { ProfilePage } from '../profile/profile';
   selector: 'page-login',
   templateUrl: 'login.html'
 })
+
+
 export class LoginPage {
+  public email: string;
 
   constructor(public navCtrl: NavController) {
   
