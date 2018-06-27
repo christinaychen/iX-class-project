@@ -14,10 +14,10 @@
 
 
 <ion-content padding style="background-color: #AFE2EB">
-  <ion-list>
+  <ion-list style="margin-top:20px;margin-right:5em;margin-left:5em" >
 
         <ion-item-group>
-          <ion-item-divider color="light">S</ion-item-divider>
+          <ion-item-divider color="light" style="font-weight: 700; border-bottom: 2px grey solid">S</ion-item-divider>
             <button ion-item *ngFor="let provider of providers" (click)="itemSelected(provider)">
                 {{ provider }}
             </button>  
