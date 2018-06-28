@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Shelter1Page } from '../shelter1/shelter1';
-import { Shelter2Page } from '../shelter2/shelter2';
-import { Shelter3Page } from '../shelter3/shelter3';
+import { ProductPage } from '../product/product';
+import { Product } from '../../models/product';
+import { Shelter } from '../../models/shelter';
+import { ShelterService } from '../../services/shelters.services';
+
 
 /**
  * Generated class for the ProvidersPage page.
@@ -18,27 +20,21 @@ import { Shelter3Page } from '../shelter3/shelter3';
 })
 export class ProvidersPage {
 
-  public providers: Array<string>;
+  public shelters: Array<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.providers = [
-      "Shelter 1",
-      "Shelter 2",
-      "Shelter 3"
-    ];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public shelterService: ShelterService) {
 
+    this.shelters = shelterService.getAllShelters();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProvidersPage');
   }
-  itemSelected(provider) {
-    if (provider=="Shelter 1")
-      this.navCtrl.push(Shelter1Page);
-    else if (provider=="Shelter 2")
-      this.navCtrl.push(Shelter2Page);
-    if (provider=="Shelter 3")
-      this.navCtrl.push(Shelter3Page);
+  
+  navigateToProducts(shelter: Shelter) {
+    this.navCtrl.push(ProductPage, {
+      items: shelter.items,
+    })
   }
 
 }

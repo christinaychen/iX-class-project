@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { RegistrationPage } from '../register/register';
 import { ProvidersPage } from '../providers/providers';
+import { ReportPage } from '../report/report';
 
 @Component({
   selector: 'page-profile',
@@ -23,4 +24,7 @@ export class ProfilePage {
     this.navCtrl.push(ProvidersPage);
   }
 
+  navigateToPayment() {
+    this.navCtrl.push(ReportPage);
+  }
 }
